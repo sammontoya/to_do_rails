@@ -1,0 +1,14 @@
+<h1><%= @task.task %></h1>
+
+
+
+<h2>Remove a Task (cuz you're done)</h2>
+
+<form action="/tasks/<%= @task.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <input name="done" type="hidden" value="true">
+  <button>Mark done</button>
+</form>
+
+
+<p><a href="/tasks">Return to To Do List</a></p>
